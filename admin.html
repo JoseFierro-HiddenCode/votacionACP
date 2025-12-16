@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Votación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+</head>
+
+<body>
+
+    <h1>🛠️ Panel de Administración</h1>
+    <p>Control de estado de la votación</p>
+
+    <div class="admin-container">
+        <div class="status-card">
+            <h2>Estado: <span id="status-text">Cargando...</span></h2>
+            <div id="status-indicator"></div>
+        </div>
+
+        <div class="controls">
+            <button id="btn-abrir" onclick="toggleVotacion('abierta')" class="btn-admin btn-open">
+                🟢 ABRIR Votación
+            </button>
+            <button id="btn-cerrar" onclick="toggleVotacion('cerrada')" class="btn-admin btn-close">
+                🔴 CERRAR Votación
+            </button>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>
